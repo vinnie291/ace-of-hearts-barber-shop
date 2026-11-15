@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS (standard CDN + gstatic fallback) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS (gstatic allowlisted CDN + standard CDN fallback) -->
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <script>
     window.tailwindConfigObject = {
       theme: {
@@ -37,7 +37,7 @@
       tailwind.config = window.tailwindConfigObject;
     } else {
       const fallbackScript = document.createElement('script');
-      fallbackScript.src = 'https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js';
+      fallbackScript.src = 'https://cdn.tailwindcss.com';
       fallbackScript.onload = function () {
         if (typeof tailwind !== 'undefined') {
           tailwind.config = window.tailwindConfigObject;
@@ -539,7 +539,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
             <div class="bg-cardDark border border-warmGold/25 rounded-[6px] p-3.5">
               <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-warmGold block">Shop Hours</span>
-              <span class="text-xs sm:text-sm font-semibold text-offWhite mt-1 block">09:00 AM – 07:00 PM</span>
+              <span class="text-xs sm:text-sm font-semibold text-offWhite mt-1 block">Tue, Thu–Sat: 9–7 • Sun: 9–6</span>
             </div>
             <div class="bg-cardDark border border-warmGold/25 rounded-[6px] p-3.5">
               <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-warmGold block">Private Suite</span>
@@ -700,7 +700,7 @@
                 <span class="text-warmGold">★</span> Dedicated Parking &amp; Amenities
               </div>
               <p class="text-xs sm:text-sm text-offWhite/85 leading-relaxed">
-                Free dedicated University Mall parking is located right <strong>next to or behind the Sunoco Gas Station</strong>. Head up to the 2nd floor inside Sola Salon to Suite #28. <strong>Pets allowed.</strong>
+                Free dedicated University Mall parking is located right <strong>next to or behind the Sunoco Gas Station</strong>. Head up to the 2nd floor inside Sola Salon to Suite #28. <strong>Free Wi-Fi • Pets allowed.</strong>
               </p>
             </div>
 
@@ -709,8 +709,24 @@
               <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-warmGold block mb-2">Shop Hours</span>
               <ul class="space-y-1.5 text-sm text-offWhite/85">
                 <li class="flex justify-between border-b border-white/10 pb-1.5">
-                  <span>Monday – Saturday</span>
-                  <span class="font-semibold text-offWhite">09:00 AM – 07:00 PM</span>
+                  <span>Monday</span>
+                  <span class="text-offWhite/55 font-medium">Closed</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-1.5">
+                  <span>Tuesday</span>
+                  <span class="font-semibold text-offWhite">9:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-1.5">
+                  <span>Wednesday</span>
+                  <span class="text-offWhite/55 font-medium">Closed</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-1.5">
+                  <span>Thursday – Saturday</span>
+                  <span class="font-semibold text-offWhite">9:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between border-b border-white/10 pb-1.5">
+                  <span>Sunday</span>
+                  <span class="font-semibold text-offWhite">9:00 AM – 6:00 PM</span>
                 </li>
                 <li class="flex justify-between pt-0.5">
                   <span>Before / After Hours</span>
@@ -956,7 +972,7 @@
   <!-- ===================================================================== -->
   <!-- 10. GALLERY LIGHTBOX MODAL (CRISP FLAT VECTOR, ZERO GLOW)             -->
   <!-- ===================================================================== -->
-  <div id="galleryLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" class="hidden fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-6">
+  <div id="galleryLightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxBadge" class="hidden fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-6">
     <div id="galleryLightboxPanel" class="bg-charcoal border border-warmGold rounded-[8px] w-full max-w-4xl max-h-[92vh] flex flex-col overflow-hidden">
       
       <!-- Lightbox Header -->
@@ -964,7 +980,7 @@
         <div class="flex items-center gap-2.5 min-w-0">
           <span class="text-richRed text-sm shrink-0">♥</span>
           <span id="lightboxBadge" class="text-[11px] font-bold uppercase tracking-[0.16em] text-warmGold truncate">
-            Booksy Portfolio • Verified Cut by Vinny
+            Ace of Hearts Barbershop • Gallery
           </span>
         </div>
 
@@ -982,31 +998,9 @@
         </div>
       </div>
 
-      <!-- Scrollable Lightbox Content Area for Mobile Landscape / Compact Screens -->
-      <div class="overflow-y-auto flex-1 flex flex-col">
-        <!-- Lightbox Image Frame -->
-        <div class="bg-obsidian flex items-center justify-center max-h-[48vh] sm:max-h-[58vh] overflow-hidden border-b border-warmGold/30">
-          <img id="lightboxImage" src="" alt="" class="w-full h-full max-h-[48vh] sm:max-h-[58vh] object-contain select-none" />
-        </div>
-
-        <!-- Lightbox Details & Direct Service Booking CTA -->
-        <div class="p-4 sm:p-6 bg-charcoal flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div class="space-y-1">
-            <span id="lightboxSourceTag" class="text-[11px] font-bold uppercase tracking-[0.16em] text-warmGold block"></span>
-            <h3 id="lightboxTitle" class="font-serif font-bold text-xl sm:text-2xl text-offWhite"></h3>
-            <p id="lightboxDesc" class="text-xs sm:text-sm text-offWhite/75 leading-relaxed max-w-2xl"></p>
-          </div>
-
-          <div class="flex flex-col sm:items-end gap-2 shrink-0">
-            <div class="flex items-center justify-between sm:justify-end gap-2 text-xs font-bold">
-              <span id="lightboxServiceLabel" class="text-offWhite/80"></span>
-              <span id="lightboxPriceTag" class="text-warmGold font-serif text-lg"></span>
-            </div>
-            <button type="button" id="lightboxBookBtn" class="w-full sm:w-auto bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.14em] px-5 py-3 rounded-[6px] border border-richRed transition-colors cursor-pointer">
-              Book This Style
-            </button>
-          </div>
-        </div>
+      <!-- Lightbox Image Frame -->
+      <div class="bg-obsidian flex items-center justify-center max-h-[76vh] overflow-hidden flex-1">
+        <img id="lightboxImage" src="" alt="" class="w-full h-full max-h-[76vh] object-contain select-none" />
       </div>
 
     </div>
@@ -1112,111 +1106,55 @@
       }
     ];
 
-    // Curated 8-card Booksy Portfolio of Actual Haircuts, Fades & Beard Work from Google Drive
+    // Curated 8-photo Gallery from Ace of Hearts Barbershop
     const GALLERY_ITEMS = [
       {
         id: 'biz-photo-02',
-        title: 'Full Cut & Sculpted Beard',
-        serviceBadge: 'Haircut And Beard • $75',
-        sourceLabel: 'Booksy Cut • 01 • Haircut And Beard ($75)',
-        clientQuote: '“Seamless taper blend paired with hot-towel straight razor beard sculpting.”',
-        serviceId: 'haircut-and-beard',
-        serviceLabel: 'Haircut And Beard • 1h 30min',
-        priceTag: '$75.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 1',
         imageUrl: 'https://drive.google.com/thumbnail?id=1KrW3MwbPo-02GKUr-DDlPm6Kw4ENEfkQ&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1KrW3MwbPo-02GKUr-DDlPm6Kw4ENEfkQ=w1600',
-        description: 'Complete signature haircut blended into a sculpted full beard with soothing hot towel finish.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1KrW3MwbPo-02GKUr-DDlPm6Kw4ENEfkQ=w1600'
       },
       {
         id: 'biz-photo-05',
-        title: 'Classic Taper & Scissor Crop',
-        serviceBadge: 'Male Haircut • $40',
-        sourceLabel: 'Booksy Cut • 02 • Male Haircut ($40)',
-        clientQuote: '“Unrushed craftsmanship and balanced proportions that grow out cleanly.”',
-        serviceId: 'male-haircut',
-        serviceLabel: 'Male Haircut • 45 min',
-        priceTag: '$40.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 2',
         imageUrl: 'https://drive.google.com/thumbnail?id=10Shrrl7y4bHupIkAbrZfdGEHFJqcZg9B&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/10Shrrl7y4bHupIkAbrZfdGEHFJqcZg9B=w1600',
-        description: 'Clean classic scissor-and-clipper taper cut shaped to fit head structure.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/10Shrrl7y4bHupIkAbrZfdGEHFJqcZg9B=w1600'
       },
       {
         id: 'biz-photo-06',
-        title: 'Precision Beard Trim & Edge',
-        serviceBadge: 'Beard Trim • $35',
-        sourceLabel: 'Booksy Cut • 03 • Beard Trim ($35)',
-        clientQuote: '“Crisp cheek lines, balanced density, and nourishing beard oil conditioning.”',
-        serviceId: 'beard-trim',
-        serviceLabel: 'Beard Trim • 30 min',
-        priceTag: '$35.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 3',
         imageUrl: 'https://drive.google.com/thumbnail?id=1kIBfGqo7APkE1y7yhR4-J8q25k1ZJFow&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1kIBfGqo7APkE1y7yhR4-J8q25k1ZJFow=w1600',
-        description: 'Detailed beard shaping, cheek and neckline grooming, and conditioning ritual.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1kIBfGqo7APkE1y7yhR4-J8q25k1ZJFow=w1600'
       },
       {
         id: 'biz-photo-07',
-        title: 'High Skin Fade & Clean Crown',
-        serviceBadge: 'Male Haircut • $40',
-        sourceLabel: 'Booksy Cut • 04 • Male Haircut ($40)',
-        clientQuote: '“Smooth high skin fade graduation and balanced crown blend.”',
-        serviceId: 'male-haircut',
-        serviceLabel: 'Male Haircut • 45 min',
-        priceTag: '$40.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 4',
         imageUrl: 'https://drive.google.com/thumbnail?id=1ufq0JHyJzpVQVFcd1cYLg8BVg0OqCjKI&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1ufq0JHyJzpVQVFcd1cYLg8BVg0OqCjKI=w1600',
-        description: 'Precision high skin fade with clean crown blending and sharp perimeter detailing.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1ufq0JHyJzpVQVFcd1cYLg8BVg0OqCjKI=w1600'
       },
       {
         id: 'biz-photo-09',
-        title: 'Executive Cut & Beard Blend',
-        serviceBadge: 'Haircut And Beard • $75',
-        sourceLabel: 'Booksy Cut • 05 • Haircut And Beard ($75)',
-        clientQuote: '“Walk out looking sharp and feeling confident—full cut and hot-towel beard detail.”',
-        serviceId: 'haircut-and-beard',
-        serviceLabel: 'Haircut And Beard • 1h 30min',
-        priceTag: '$75.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 5',
         imageUrl: 'https://drive.google.com/thumbnail?id=1BiWnLSi4lUO1irWOspHDvOCW4fN-SaG9&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1BiWnLSi4lUO1irWOspHDvOCW4fN-SaG9=w1600',
-        description: 'Full executive haircut paired with detailed beard sculpting and straight-blade edge work.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1BiWnLSi4lUO1irWOspHDvOCW4fN-SaG9=w1600'
       },
       {
         id: 'biz-photo-16',
-        title: 'Sharp Shape Up & Neck Taper',
-        serviceBadge: 'Shape Up • $30',
-        sourceLabel: 'Booksy Cut • 06 • Shape Up ($30)',
-        clientQuote: '“Razor-crisp hairline geometry, temple framing, and clean neck taper.”',
-        serviceId: 'shape-up',
-        serviceLabel: 'Shape Up • 30 min',
-        priceTag: '$30.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 6',
         imageUrl: 'https://drive.google.com/thumbnail?id=1M1OYdJSq8LQPxps9PsFpNeLfysP5Q8Rv&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1M1OYdJSq8LQPxps9PsFpNeLfysP5Q8Rv=w1600',
-        description: 'Precision hairline, temple, and neckline outlining with a clean tapered nape finish.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1M1OYdJSq8LQPxps9PsFpNeLfysP5Q8Rv=w1600'
       },
       {
         id: 'biz-photo-18',
-        title: 'Low Taper Fade & Styled Top',
-        serviceBadge: 'Male Haircut • $40',
-        sourceLabel: 'Booksy Cut • 07 • Male Haircut ($40)',
-        clientQuote: '“Clean low taper around the ears and nape with natural volume styled on top.”',
-        serviceId: 'male-haircut',
-        serviceLabel: 'Male Haircut • 45 min',
-        priceTag: '$40.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 7',
         imageUrl: 'https://drive.google.com/thumbnail?id=1DfQgY5h-wMK1QG5xyRnAWcKbicOHqTfv&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1DfQgY5h-wMK1QG5xyRnAWcKbicOHqTfv=w1600',
-        description: 'Low-taper fade crafted with clean perimeter detailing and effortless daily texture on top.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1DfQgY5h-wMK1QG5xyRnAWcKbicOHqTfv=w1600'
       },
       {
         id: 'biz-photo-14',
-        title: 'Skin Fade & Textured Fringe',
-        serviceBadge: 'Male Haircut • $40',
-        sourceLabel: 'Booksy Cut • 08 • Male Haircut ($40)',
-        clientQuote: '“Cleanest skin fade in Fairfax—sharp perimeter detailing and natural texture.”',
-        serviceId: 'male-haircut',
-        serviceLabel: 'Male Haircut • 45 min',
-        priceTag: '$40.00',
+        alt: 'Ace of Hearts Barbershop gallery photo 8',
         imageUrl: 'https://drive.google.com/thumbnail?id=1ZQclM8NFIWeBSbCJ6kMWGdFthJRlL4BR&sz=w1600',
-        fallbackUrl: 'https://lh3.googleusercontent.com/d/1ZQclM8NFIWeBSbCJ6kMWGdFthJRlL4BR=w1600',
-        description: 'Precision skin fade blended into a textured crop with razor-clean outlining by Master Barber Vinny.'
+        fallbackUrl: 'https://lh3.googleusercontent.com/d/1ZQclM8NFIWeBSbCJ6kMWGdFthJRlL4BR=w1600'
       }
     ];
 
@@ -1250,65 +1188,24 @@
         <div
           style="flex: 0 0 ${cardBasisPercent}%; max-width: ${cardBasisPercent}%;"
           class="px-2.5 box-border">
-          <article class="group bg-obsidian border border-warmGold/35 hover:border-warmGold rounded-[8px] overflow-hidden flex flex-col justify-between h-full transition-colors duration-200">
-            <div>
-              <!-- Image Container with Clean Dark Bottom Gradient Caption Bar -->
-              <div
-                onclick="openGalleryLightbox(${idx})"
-                class="relative aspect-[4/3] w-full bg-cardDark overflow-hidden border-b border-warmGold/30 cursor-pointer">
-                <img
-                  src="${item.imageUrl}"
-                  onerror="this.onerror=null;this.src='${item.fallbackUrl}';"
-                  alt="${item.title} — Ace of Hearts Barbershop"
-                  loading="lazy"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-
-                <!-- Top Service & Price Pill Badge -->
-                <span class="absolute top-3 left-3 bg-obsidian border border-warmGold/60 text-warmGold text-[10px] font-bold uppercase tracking-[0.14em] px-2.5 py-1 rounded-[4px]">
-                  ${item.serviceBadge}
-                </span>
-
-                <!-- Expand Hint Tag -->
-                <span class="absolute top-3 right-3 bg-obsidian/90 border border-white/15 text-offWhite/85 text-[10px] font-bold uppercase tracking-[0.12em] px-2 py-1 rounded-[4px]">
-                  Zoom ⤢
-                </span>
-
-                <!-- Clean Dark Gradient Bottom Caption Bar -->
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/85 to-transparent px-4 pt-8 pb-3">
-                  <span class="block text-[10px] font-bold uppercase tracking-[0.15em] text-warmGold">
-                    ${item.sourceLabel}
-                  </span>
-                  <h3 class="font-serif font-bold text-lg text-offWhite leading-snug mt-0.5">
-                    ${item.title}
-                  </h3>
-                </div>
-              </div>
-
-              <!-- Verified Booksy Client Review Quote / Caption -->
-              <div class="p-4 sm:p-5">
-                <p class="text-xs sm:text-sm text-offWhite/80 italic leading-relaxed">
-                  ${item.clientQuote}
-                </p>
-              </div>
-            </div>
-
-            <!-- Card Footer Direct Booking CTA -->
-            <div class="px-4 sm:px-5 py-3.5 bg-cardDark border-t border-warmGold/25 flex items-center justify-between gap-2">
-              <button
-                type="button"
-                onclick="openGalleryLightbox(${idx})"
-                class="text-[11px] font-bold uppercase tracking-[0.14em] text-offWhite/80 hover:text-warmGold bg-obsidian border border-warmGold/30 hover:border-warmGold px-3.5 py-2 rounded-[6px] transition-colors cursor-pointer">
-                Details
-              </button>
-              <button
-                type="button"
-                onclick="openBooksyModal('${item.serviceId}')"
-                class="bg-richRed hover:bg-red-700 text-offWhite font-bold text-[11px] uppercase tracking-[0.14em] px-4 py-2 rounded-[6px] border border-richRed transition-colors cursor-pointer">
-                Book This Cut
-              </button>
-            </div>
-          </article>
+          <div
+            role="button"
+            tabindex="0"
+            aria-label="View gallery photo ${idx + 1}"
+            onclick="openGalleryLightbox(${idx})"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGalleryLightbox(${idx});}"
+            class="group relative aspect-[4/3] w-full bg-obsidian border border-warmGold/35 hover:border-warmGold rounded-[8px] overflow-hidden cursor-pointer transition-colors duration-200">
+            <img
+              src="${item.imageUrl}"
+              onerror="this.onerror=null;this.src='${item.fallbackUrl}';"
+              alt="${item.alt}"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span class="absolute top-3 right-3 bg-obsidian/90 border border-white/15 text-offWhite/85 text-[10px] font-bold uppercase tracking-[0.12em] px-2 py-1 rounded-[4px]">
+              Zoom ⤢
+            </span>
+          </div>
         </div>
       `).join('');
 
@@ -1433,12 +1330,6 @@
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxBadge = document.getElementById('lightboxBadge');
     const lightboxCounter = document.getElementById('lightboxCounter');
-    const lightboxSourceTag = document.getElementById('lightboxSourceTag');
-    const lightboxTitle = document.getElementById('lightboxTitle');
-    const lightboxDesc = document.getElementById('lightboxDesc');
-    const lightboxServiceLabel = document.getElementById('lightboxServiceLabel');
-    const lightboxPriceTag = document.getElementById('lightboxPriceTag');
-    const lightboxBookBtn = document.getElementById('lightboxBookBtn');
     const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
     const lightboxNextBtn = document.getElementById('lightboxNextBtn');
     const closeLightboxBtn = document.getElementById('closeLightboxBtn');
@@ -1452,19 +1343,9 @@
         this.onerror = null;
         this.src = item.fallbackUrl;
       };
-      lightboxImage.alt = `${item.title} — Ace of Hearts Barbershop`;
-      lightboxBadge.textContent = 'Booksy Portfolio • Verified Cut by Vinny';
+      lightboxImage.alt = item.alt;
+      lightboxBadge.textContent = 'Ace of Hearts Barbershop • Gallery';
       lightboxCounter.textContent = `${formatTwoDigits(currentLightboxIndex + 1)} / ${formatTwoDigits(GALLERY_ITEMS.length)}`;
-      lightboxSourceTag.textContent = item.sourceLabel;
-      lightboxTitle.textContent = item.title;
-      lightboxDesc.textContent = item.description;
-      lightboxServiceLabel.textContent = item.serviceLabel;
-      lightboxPriceTag.textContent = item.priceTag;
-
-      lightboxBookBtn.onclick = () => {
-        closeGalleryLightbox();
-        openBooksyModal(item.serviceId);
-      };
     }
 
     function openGalleryLightbox(index) {
