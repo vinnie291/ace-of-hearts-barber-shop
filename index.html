@@ -2277,6 +2277,22 @@
       }
 
       if (window.parent && window.parent !== window) {
+        // Intercept external links when embedded in Wix IFrame so the parent Wix page
+        // navigates outside the sandbox (prevents ERR_BLOCKED_BY_RESPONSE on COOP/XFO sites like Booksy).
+        document.addEventListener('click', (event) => {
+          const anchor = event.target.closest('a[href]');
+          if (!anchor) return;
+          const rawHref = anchor.getAttribute('href') || '';
+          if (!rawHref || rawHref.startsWith('#')) return;
+          if (/^(https?:|tel:|mailto:)/i.test(anchor.href)) {
+            event.preventDefault();
+            window.parent.postMessage({
+              type: 'ACE_OPEN_URL',
+              url: anchor.href
+            }, '*');
+          }
+        });
+
         const notifyWixHeight = () => {
           window.parent.postMessage({
             type: 'ACE_WIX_READY',

@@ -25,6 +25,7 @@
 
 import wixData from 'wix-data';
 import wixSeoFrontend from 'wix-seo-frontend';
+import wixLocationFrontend from 'wix-location-frontend';
 
 // Helper: safely query a Wix CMS collection without failing if a collection is not created yet
 async function safeQueryCollection(collectionId, sortField = 'sortOrder') {
@@ -72,11 +73,14 @@ $w.onReady(async function () {
       });
     };
 
-    // Push immediately on page ready AND whenever the iframe signals ACE_WIX_READY
+    // Push immediately on page ready AND whenever the iframe signals ACE_WIX_READY,
+    // and handle external link navigation outside the sandboxed iframe.
     pushToEmbed();
     htmlEmbed.onMessage((event) => {
       if (event?.data?.type === 'ACE_WIX_READY') {
         pushToEmbed();
+      } else if (event?.data?.type === 'ACE_OPEN_URL' && event.data.url) {
+        wixLocationFrontend.to(event.data.url);
       }
     });
   }
