@@ -150,12 +150,13 @@
 
       <!-- Desktop & Mobile Primary CTA + Mobile Menu Toggle -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <button
-          type="button"
-          onclick="openBooksyModal()"
+        <a
+          href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo"
+          target="_blank"
+          rel="noopener noreferrer"
           class="inline-flex items-center justify-center whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-[11px] sm:text-xs uppercase tracking-[0.08em] sm:tracking-[0.15em] px-2.5 sm:px-5 py-2 sm:py-3 rounded-[6px] border border-richRed transition-colors cursor-pointer">
           Book Now
-        </button>
+        </a>
 
         <button
           type="button"
@@ -182,9 +183,9 @@
       <a href="#reviews" class="mobile-link block py-2.5 px-3 rounded-[6px] text-xs font-bold uppercase tracking-[0.18em] text-offWhite hover:bg-cardDark hover:text-warmGold">Client Reviews</a>
       <a href="#location" class="mobile-link block py-2.5 px-3 rounded-[6px] text-xs font-bold uppercase tracking-[0.18em] text-offWhite hover:bg-cardDark hover:text-warmGold">Location &amp; Parking</a>
       <div class="pt-2">
-        <button type="button" onclick="openBooksyModal()" class="w-full bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-[6px] border border-richRed cursor-pointer">
+        <a href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="block w-full text-center bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.16em] py-3.5 rounded-[6px] border border-richRed transition-colors">
           Reserve Your Chair on Booksy
-        </button>
+        </a>
       </div>
     </nav>
   </header>
@@ -202,22 +203,23 @@
         <span class="text-deepBlue">♥</span>
       </div>
 
-      <!-- Secondary Horizontal Wordmark SVG ("ACE" with White Heart Cutout + Tagline) -->
+      <!-- Secondary Horizontal Wordmark SVG ("ACE" with Flat-Top Red Trapezoid + Heart Cutout, Bold Geometric C, Stencil E) -->
       <div class="flex flex-col items-center justify-center mb-7">
-        <svg class="w-64 sm:w-80 h-auto" viewBox="0 0 360 125" role="img" aria-label="ACE Barbershop Wordmark">
-          <!-- Red 'A' Triangle with White Heart Cutout -->
-          <polygon points="62,10 10,115 114,115" fill="#E51A24" />
-          <path d="M 62,92 C 62,92 41,76 41,61 C 41,51 49,45 56,45 C 60,45 61.5,48 62,50 C 62.5,48 64,45 68,45 C 75,45 83,51 83,61 C 83,76 62,92 62,92 Z" fill="#F4F4F4" />
-          
-          <!-- Off-White Geometric 'C' -->
-          <path d="M 218,33 A 46,46 0 1,0 218,92 L 201,78 A 24,24 0 1,1 201,47 Z" fill="#F4F4F4" />
-          
-          <!-- Deep Blue Geometric 'E' -->
-          <path d="M 245,14 L 336,14 L 336,34 L 269,34 L 269,53 L 326,53 L 326,73 L 269,73 L 269,95 L 336,95 L 336,115 L 245,115 Z" fill="#2B52A3" />
+        <svg class="w-64 sm:w-80 h-auto" viewBox="0 0 320 120" role="img" aria-label="ACE Barbershop Wordmark">
+          <!-- Red Flat-Top Trapezoid 'A' with White Heart Cutout -->
+          <polygon points="54,10 78,10 120,110 12,110" fill="#E51A24" />
+          <path d="M 66,96 C 66,96 41,72 41,56 C 41,46 49,42 56,42 C 61.5,42 64.5,46 66,51 C 67.5,46 70.5,42 76,42 C 83,42 91,46 91,56 C 91,72 66,96 66,96 Z" fill="#F4F4F4" />
+
+          <!-- Off-White Bold Geometric 'C' -->
+          <path d="M 215.2,26.5 A 50,50 0 1,0 215.2,93.5 L 200.3,80.1 A 30,30 0 1,1 200.3,39.9 Z" fill="#F4F4F4" />
+
+          <!-- Deep Blue Stencil 'E' (Detached Top Bar + Lower Stem with Middle & Bottom Bars) -->
+          <rect x="232" y="10" width="76" height="18" fill="#2B52A3" />
+          <path d="M 232,50 L 300,50 L 300,68 L 253,68 L 253,92 L 308,92 L 308,110 L 232,110 Z" fill="#2B52A3" />
         </svg>
 
-        <p class="font-serif italic font-semibold text-xl sm:text-2xl text-warmGold tracking-wide mt-2">
-          “Looks Good, Feel Good”
+        <p class="font-serif font-bold text-xl sm:text-2xl text-warmGold tracking-wide mt-2">
+          Looks Good, Feel Good
         </p>
       </div>
 
@@ -233,12 +235,13 @@
 
       <!-- Hero Dual CTAs -->
       <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md sm:max-w-none mx-auto">
-        <button
-          type="button"
-          onclick="openBooksyModal()"
-          class="w-full sm:w-auto bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.16em] px-8 py-4 rounded-[6px] border border-richRed transition-colors cursor-pointer">
+        <a
+          href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full sm:w-auto bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.16em] px-8 py-4 rounded-[6px] border border-richRed transition-colors text-center">
           Reserve Your Chair
-        </button>
+        </a>
         <a
           href="#services"
           class="w-full sm:w-auto bg-obsidian hover:bg-deepBlue/25 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.16em] px-8 py-4 rounded-[6px] border border-deepBlue transition-colors">
@@ -362,12 +365,13 @@
           </ul>
 
           <div class="pt-2 flex flex-col sm:flex-row gap-3">
-            <button
-              type="button"
-              onclick="openBooksyModal()"
-              class="flex-1 bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.15em] py-3.5 px-4 rounded-[6px] border border-richRed transition-colors cursor-pointer">
+            <a
+              href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.15em] py-3.5 px-4 rounded-[6px] border border-richRed transition-colors text-center">
               Book with Vinny
-            </button>
+            </a>
             <a
               href="tel:+17036551109"
               class="flex-1 bg-cardDark hover:bg-warmGold/15 text-warmGold border border-warmGold font-bold text-xs uppercase tracking-[0.15em] py-3.5 px-4 rounded-[6px] text-center transition-colors">
@@ -555,9 +559,9 @@
         <!-- Right Direct Booksy CTA Box -->
         <div class="lg:col-span-4 flex flex-col items-stretch sm:items-center lg:items-stretch justify-center bg-cardDark border border-warmGold/35 rounded-[8px] p-6 sm:p-7 text-center space-y-4">
           <span class="text-xs font-bold uppercase tracking-[0.18em] text-offWhite/75">Instant Confirmation</span>
-          <button type="button" onclick="openBooksyModal()" class="w-full whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.15em] py-4 px-5 rounded-[6px] border border-richRed transition-colors duration-200 text-center cursor-pointer">
+          <a href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo" target="_blank" rel="noopener noreferrer" class="w-full whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.15em] py-4 px-5 rounded-[6px] border border-richRed transition-colors duration-200 text-center">
             Book Now on Booksy
-          </button>
+          </a>
           <p class="text-xs text-offWhite/65">
             Questions? Call or Text <a href="tel:+17036551109" class="text-warmGold hover:underline font-semibold py-1 inline-block">(703) 655-1109</a>
           </p>
@@ -752,9 +756,9 @@
 
           <!-- Action Buttons -->
           <div class="pt-4 flex flex-col sm:flex-row gap-3">
-            <button type="button" onclick="openBooksyModal()" class="flex-1 whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.1em] sm:tracking-[0.12em] py-3.5 px-3.5 rounded-[6px] text-center transition-colors cursor-pointer">
+            <a href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo" target="_blank" rel="noopener noreferrer" class="flex-1 whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.1em] sm:tracking-[0.12em] py-3.5 px-3.5 rounded-[6px] text-center transition-colors">
               Book Now on Booksy
-            </button>
+            </a>
             <a href="https://maps.google.com/?q=10621+Braddock+Rd+Fairfax+VA+22032" target="_blank" rel="noopener noreferrer" class="flex-1 whitespace-nowrap bg-cardDark hover:bg-warmGold/15 text-warmGold border border-warmGold font-bold text-xs uppercase tracking-[0.1em] sm:tracking-[0.12em] py-3.5 px-3.5 rounded-[6px] text-center transition-colors">
               Get Directions
             </a>
@@ -839,9 +843,9 @@
           <span class="text-xs font-bold uppercase tracking-[0.2em] text-warmGold">Ready For Your Cut?</span>
           <p class="text-xs text-offWhite/80">10621 Braddock Rd J, Suite 28 • Fairfax, VA 22032</p>
           <a href="tel:+17036551109" class="text-sm font-bold text-offWhite hover:text-warmGold transition-colors py-1">(703) 655-1109</a>
-          <button type="button" onclick="openBooksyModal()" class="bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.14em] px-6 py-3 rounded-[6px] transition-colors cursor-pointer">
+          <a href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax#ba_s=seo" target="_blank" rel="noopener noreferrer" class="whitespace-nowrap inline-block bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.14em] px-6 py-3 rounded-[6px] transition-colors">
             Book Now on Booksy
-          </button>
+          </a>
         </div>
       </div>
 
@@ -856,118 +860,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ===================================================================== -->
-  <!-- 9. BOOKSY APPOINTMENT PRE-CHECK & LAUNCH MODAL (FLAT VECTOR)          -->
-  <!-- ===================================================================== -->
-  <div id="booksyModal" role="dialog" aria-modal="true" aria-labelledby="booksyModalTitle" class="hidden fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-3 sm:p-6">
-    <!-- Modal Container: Flat Charcoal #1A1A1A with 1px solid #E2AA36 Warm Gold border & mobile scroll support -->
-    <div id="booksyModalPanel" class="bg-charcoal border border-warmGold rounded-[8px] w-full max-w-xl max-h-[92vh] flex flex-col overflow-hidden">
-      
-      <!-- Modal Header -->
-      <div class="bg-obsidian px-4 sm:px-6 py-3.5 sm:py-4 border-b border-warmGold/45 flex items-center justify-between gap-3 shrink-0">
-        <div class="flex items-center gap-3 min-w-0">
-          <!-- Mini Circular Crest SVG -->
-          <svg class="w-10 h-10 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
-            <circle cx="100" cy="100" r="95" fill="#090909" />
-            <circle cx="100" cy="100" r="88" fill="none" stroke="#E51A24" stroke-width="4.5" />
-            <path d="M 100,141 C 100,141 62,115 62,88 C 62,72 75,63 87,63 C 94,63 98,67 100,72 C 102,67 106,63 113,63 C 125,63 138,72 138,88 C 138,115 100,141 100,141 Z"
-                  fill="#E51A24" stroke="#2B52A3" stroke-width="6.5" stroke-linejoin="round" />
-            <path d="M 100,78 L 74,132 L 85,132 L 100,100 L 115,132 L 126,132 Z" fill="#F4F4F4" />
-          </svg>
-
-          <div class="min-w-0">
-            <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-warmGold block">Official Booksy Scheduler</span>
-            <h2 id="booksyModalTitle" class="font-serif font-bold text-lg sm:text-xl text-offWhite truncate">
-              Confirm Your Appointment
-            </h2>
-          </div>
-        </div>
-
-        <button type="button" id="closeBooksyModalBtn" aria-label="Close Booksy Scheduler" class="w-9 h-9 rounded-[6px] bg-cardDark hover:bg-richRed text-offWhite border border-warmGold/40 hover:border-richRed flex items-center justify-center text-xl font-bold leading-none transition-colors cursor-pointer shrink-0">
-          &times;
-        </button>
-      </div>
-
-      <!-- Modal Body: Scrollable on compact mobile viewports -->
-      <div class="p-4 sm:p-7 space-y-4 sm:space-y-5 lattice-card overflow-y-auto flex-1">
-        
-        <!-- Service Dropdown Selector -->
-        <div>
-          <label for="modalServiceSelect" class="block text-[11px] font-bold uppercase tracking-[0.18em] text-warmGold mb-2">
-            Selected Service
-          </label>
-          <select id="modalServiceSelect" class="w-full bg-obsidian text-offWhite border border-warmGold/50 focus:border-warmGold focus:outline-none rounded-[6px] px-3.5 py-3 text-sm font-medium">
-            <!-- Populated dynamically with all 9 Booksy services -->
-          </select>
-        </div>
-
-        <!-- Appointment Details Summary Box -->
-        <div class="bg-obsidian border border-warmGold/35 rounded-[8px] p-4 sm:p-5 space-y-3.5">
-          <div class="flex items-start justify-between gap-4 border-b border-warmGold/20 pb-3.5">
-            <div>
-              <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-offWhite/55 block">Service</span>
-              <p id="summaryServiceName" class="font-serif font-bold text-lg sm:text-xl text-offWhite mt-0.5">Male Haircut</p>
-              <p id="summaryServiceDesc" class="text-xs text-offWhite/70 mt-1 leading-relaxed">
-                Tailored to your style and head shape for a crisp, effortless look.
-              </p>
-            </div>
-            <div class="text-right shrink-0">
-              <span id="summaryServicePrice" class="font-serif font-extrabold text-2xl text-warmGold block leading-none">$40.00</span>
-              <span id="summaryServiceDuration" class="text-xs font-semibold text-offWhite/70 mt-1.5 block">45 min</span>
-            </div>
-          </div>
-
-          <!-- Barber & Studio Info Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs">
-            <div class="bg-cardDark border border-white/10 rounded-[6px] p-2.5 sm:p-3">
-              <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-warmGold block">Master Barber</span>
-              <span class="text-offWhite font-semibold mt-0.5 block">Vinny (4.9★ • 49 Reviews)</span>
-            </div>
-            <div class="bg-cardDark border border-white/10 rounded-[6px] p-2.5 sm:p-3">
-              <span class="text-[10px] font-bold uppercase tracking-[0.16em] text-warmGold block">Private Suite</span>
-              <span class="text-offWhite font-semibold mt-0.5 block">Suite #28 • 10621 Braddock Rd J</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Primary Direct Launch CTA (Opens Booksy in a clean new tab) -->
-        <div class="space-y-2.5 sm:space-y-3 pt-1">
-          <a
-            id="booksyLaunchBtn"
-            href="https://booksy.com/en-us/1352987_ace-of-hearts-barbershop_barber-shop_38163_fairfax?service=male-haircut#ba_s=seo"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full block bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.15em] py-3.5 sm:py-4 px-5 rounded-[6px] border border-richRed transition-colors duration-200 text-center">
-            Open Booksy to Pick Time ↗
-          </a>
-
-          <!-- Secondary Actions: Copy Direct Link & Direct Phone Call -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
-            <button
-              type="button"
-              id="copyBookingLinkBtn"
-              class="w-full bg-obsidian hover:bg-warmGold/15 text-warmGold border border-warmGold/50 font-bold text-xs uppercase tracking-[0.13em] py-3 px-4 rounded-[6px] transition-colors cursor-pointer">
-              Copy Direct Booking Link
-            </button>
-            <a
-              href="tel:+17036551109"
-              class="w-full bg-obsidian hover:bg-deepBlue/25 text-offWhite border border-deepBlue font-bold text-xs uppercase tracking-[0.13em] py-3 px-4 rounded-[6px] transition-colors text-center">
-              Call / Text (703) 655-1109
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="bg-obsidian px-4 sm:px-6 py-3 border-t border-warmGold/35 flex flex-wrap items-center justify-between gap-2 text-xs text-offWhite/70 shrink-0">
-        <span>Sola Salon Studios • University Mall • Fairfax, VA</span>
-        <span class="text-warmGold font-medium">Free Parking • Pets Allowed</span>
-      </div>
-
-    </div>
-  </div>
 
   <!-- ===================================================================== -->
   <!-- 10. GALLERY LIGHTBOX MODAL (CRISP FLAT VECTOR, ZERO GLOW)             -->
@@ -1358,9 +1250,7 @@
 
     function closeGalleryLightbox() {
       galleryLightbox.classList.add('hidden');
-      if (booksyModal.classList.contains('hidden')) {
-        document.body.classList.remove('overflow-hidden');
-      }
+      document.body.classList.remove('overflow-hidden');
     }
 
     lightboxPrevBtn.addEventListener('click', () => {
@@ -1409,7 +1299,7 @@
       }
     }, { passive: true });
 
-    // Render Service Cards with direct Booksy service links that open the Appointment Pre-Check Modal on click
+    // Render Service Cards with direct Booksy service links
     function renderServices(filter = 'all') {
       const grid = document.getElementById('servicesGrid');
       const filtered = filter === 'all'
@@ -1445,8 +1335,6 @@
               href="${service.booksyUrl}"
               target="_blank"
               rel="noopener noreferrer"
-              data-service-id="${service.id}"
-              onclick="handleServiceBookingClick(event, this)"
               class="service-book-link shrink-0 whitespace-nowrap inline-block bg-richRed hover:bg-red-700 text-offWhite font-bold text-[11px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.14em] px-3.5 sm:px-4 py-2.5 rounded-[6px] transition-colors cursor-pointer">
               Book on Booksy
             </a>
@@ -1454,123 +1342,6 @@
         </div>
       `).join('');
     }
-
-    // Booksy Appointment Pre-Check & Launch Modal Controls
-    const booksyModal = document.getElementById('booksyModal');
-    const modalServiceSelect = document.getElementById('modalServiceSelect');
-    const summaryServiceName = document.getElementById('summaryServiceName');
-    const summaryServiceDesc = document.getElementById('summaryServiceDesc');
-    const summaryServicePrice = document.getElementById('summaryServicePrice');
-    const summaryServiceDuration = document.getElementById('summaryServiceDuration');
-    const booksyLaunchBtn = document.getElementById('booksyLaunchBtn');
-    const copyBookingLinkBtn = document.getElementById('copyBookingLinkBtn');
-    const closeBooksyModalBtn = document.getElementById('closeBooksyModalBtn');
-
-    // Populate modal dropdown options
-    function populateModalServiceDropdown() {
-      const generalOption = `<option value="all-services">All Services — Browse Full Booksy Menu</option>`;
-      const serviceOptions = SERVICES.map(service =>
-        `<option value="${service.id}">${service.name} — ${service.price} (${service.duration})</option>`
-      ).join('');
-      modalServiceSelect.innerHTML = generalOption + serviceOptions;
-    }
-
-    // Update modal summary card and external Booksy launch URL based on selected service ID
-    function updateModalServiceSummary(serviceId = 'all-services') {
-      const selected = SERVICES.find(s => s.id === serviceId);
-
-      if (selected) {
-        modalServiceSelect.value = selected.id;
-        summaryServiceName.textContent = selected.name;
-        summaryServiceDesc.textContent = selected.description;
-        summaryServicePrice.textContent = selected.price;
-        summaryServiceDuration.textContent = selected.duration;
-        booksyLaunchBtn.setAttribute('href', selected.booksyUrl);
-        booksyLaunchBtn.textContent = `Open Booksy for ${selected.name} ↗`;
-      } else {
-        modalServiceSelect.value = 'all-services';
-        summaryServiceName.textContent = 'Full Booksy Service Menu';
-        summaryServiceDesc.textContent = 'Choose from all 9 signature haircuts, hot-towel straight razor shaves, beard trims, and VIP slots directly on Vinny’s Booksy calendar.';
-        summaryServicePrice.textContent = 'From $10';
-        summaryServiceDuration.textContent = '10m – 1h 30m';
-        booksyLaunchBtn.setAttribute('href', BOOKSY_URL);
-        booksyLaunchBtn.textContent = 'Open Booksy to Pick Time ↗';
-      }
-    }
-
-    modalServiceSelect.addEventListener('change', (event) => {
-      updateModalServiceSummary(event.target.value);
-    });
-
-    function handleServiceBookingClick(event, anchorEl) {
-      // Allow middle-click, Ctrl/Cmd-click, or Shift-click to open directly in a new tab
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.button === 1) {
-        return;
-      }
-      event.preventDefault();
-      const serviceId = anchorEl.getAttribute('data-service-id') || 'all-services';
-      openBooksyModal(serviceId);
-    }
-
-    function openBooksyModal(serviceId = 'all-services') {
-      closeMobileMenu();
-      updateModalServiceSummary(serviceId);
-      booksyModal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-
-    function closeBooksyModal() {
-      booksyModal.classList.add('hidden');
-      if (galleryLightbox.classList.contains('hidden')) {
-        document.body.classList.remove('overflow-hidden');
-      }
-    }
-
-    // Copy Direct Booking Link using modern Clipboard API with fallback for iframe/sandboxed environments
-    copyBookingLinkBtn.addEventListener('click', async () => {
-      const urlToCopy = booksyLaunchBtn.getAttribute('href') || BOOKSY_URL;
-      const showCopiedFeedback = (label) => {
-        copyBookingLinkBtn.textContent = label;
-        copyBookingLinkBtn.classList.add('bg-warmGold/20', 'border-warmGold');
-        setTimeout(() => {
-          copyBookingLinkBtn.textContent = 'Copy Direct Booking Link';
-          copyBookingLinkBtn.classList.remove('bg-warmGold/20', 'border-warmGold');
-        }, 2200);
-      };
-
-      try {
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          await navigator.clipboard.writeText(urlToCopy);
-          showCopiedFeedback('✓ Booking Link Copied!');
-          return;
-        }
-      } catch (_) {
-        // Fall through to textarea execCommand fallback
-      }
-
-      const tempInput = document.createElement('textarea');
-      tempInput.value = urlToCopy;
-      tempInput.setAttribute('readonly', '');
-      tempInput.style.position = 'fixed';
-      tempInput.style.opacity = '0';
-      document.body.appendChild(tempInput);
-      tempInput.select();
-      try {
-        document.execCommand('copy');
-        showCopiedFeedback('✓ Booking Link Copied!');
-      } catch (err) {
-        showCopiedFeedback('Link Ready Above ↗');
-      }
-      document.body.removeChild(tempInput);
-    });
-
-    closeBooksyModalBtn.addEventListener('click', closeBooksyModal);
-
-    booksyModal.addEventListener('click', (event) => {
-      if (event.target === booksyModal) {
-        closeBooksyModal();
-      }
-    });
 
     // Mobile Menu Toggle & State Helpers
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -1612,13 +1383,11 @@
       }
     });
 
-    // Close modals/menu on Escape & navigate Lightbox or Slider with Arrow keys (without hijacking browser shortcuts)
+    // Close lightbox/menu on Escape & navigate Lightbox or Slider with Arrow keys (without hijacking browser shortcuts)
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         if (!galleryLightbox.classList.contains('hidden')) {
           closeGalleryLightbox();
-        } else if (!booksyModal.classList.contains('hidden')) {
-          closeBooksyModal();
         } else if (!mobileMenu.classList.contains('hidden')) {
           closeMobileMenu();
         }
@@ -1638,7 +1407,7 @@
           currentLightboxIndex = (currentLightboxIndex + 1) % GALLERY_ITEMS.length;
           updateLightboxContent();
         }
-      } else if (booksyModal.classList.contains('hidden')) {
+      } else {
         if (event.key === 'ArrowLeft') {
           goToSlide(currentSlideIndex - 1);
         } else if (event.key === 'ArrowRight') {
@@ -1665,7 +1434,6 @@
 
     // Initialize Page Defaults
     document.addEventListener('DOMContentLoaded', () => {
-      populateModalServiceDropdown();
       renderServices('all');
       renderGallerySlider();
       document.getElementById('currentYear').textContent = new Date().getFullYear();
