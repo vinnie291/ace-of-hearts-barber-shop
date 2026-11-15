@@ -2256,9 +2256,11 @@
     }
 
     // Listen for live Wix Velo CMS data via window.postMessage
+    let hasWixVeloBridge = false;
     window.addEventListener('message', (event) => {
       const data = event.data;
       if (data && data.type === 'WIX_CMS_DATA') {
+        hasWixVeloBridge = true;
         applyWixCmsData(data.payload || data);
       }
     });
@@ -2277,9 +2279,10 @@
       }
 
       if (window.parent && window.parent !== window) {
-        // Intercept external links when embedded in Wix IFrame so the parent Wix page
-        // navigates outside the sandbox (prevents ERR_BLOCKED_BY_RESPONSE on COOP/XFO sites like Booksy).
+        // Intercept external links only when a Wix Velo bridge is active so the parent
+        // Wix page can navigate outside the sandboxed iframe.
         document.addEventListener('click', (event) => {
+          if (!hasWixVeloBridge) return;
           const anchor = event.target.closest('a[href]');
           if (!anchor) return;
           const rawHref = anchor.getAttribute('href') || '';
