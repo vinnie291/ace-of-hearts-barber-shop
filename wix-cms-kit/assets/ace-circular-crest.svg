@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Ace of Hearts Barbershop Crest">
+  <defs>
+    <path id="topArc" d="M 28,100 A 72,72 0 1,1 172,100" />
+    <path id="bottomArc" d="M 24,104 A 76,76 0 0,0 176,104" />
+  </defs>
+  <circle cx="100" cy="100" r="95" fill="#090909" />
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#E51A24" stroke-width="3.5" />
+  <circle cx="100" cy="100" r="57" fill="none" stroke="#E51A24" stroke-width="2.5" />
+  <text fill="#F4F4F4" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="16.5" letter-spacing="1.6">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">ACE OF HEARTS</textPath>
+  </text>
+  <text fill="#E2AA36" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="16" letter-spacing="1.8">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">BARBERSHOP</textPath>
+  </text>
+  <path d="M 27,97 C 27,93 22,93 22,97 C 22,101 27,105 27,105 C 27,105 32,101 32,97 C 32,93 27,93 27,97 Z" fill="#2B52A3" />
+  <path d="M 173,97 C 173,93 168,93 168,97 C 168,101 173,105 173,105 C 173,105 178,101 178,97 C 178,93 173,93 173,97 Z" fill="#2B52A3" />
+  <path d="M 100,141 C 100,141 62,115 62,88 C 62,72 75,63 87,63 C 94,63 98,67 100,72 C 102,67 106,63 113,63 C 125,63 138,72 138,88 C 138,115 100,141 100,141 Z"
+        fill="#E51A24" stroke="#2B52A3" stroke-width="6.5" stroke-linejoin="round" />
+  <path d="M 100,78 L 74,132 L 85,132 L 100,100 L 115,132 L 126,132 Z" fill="#F4F4F4" />
+</svg>

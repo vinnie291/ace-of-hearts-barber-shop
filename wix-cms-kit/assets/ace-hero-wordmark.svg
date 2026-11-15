@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" role="img" aria-label="ACE Barbershop Wordmark">
+  <!-- Red Flat-Top Trapezoid 'A' with White Heart Cutout -->
+  <polygon points="54,10 78,10 120,110 12,110" fill="#E51A24" />
+  <path d="M 66,96 C 66,96 41,72 41,56 C 41,46 49,42 56,42 C 61.5,42 64.5,46 66,51 C 67.5,46 70.5,42 76,42 C 83,42 91,46 91,56 C 91,72 66,96 66,96 Z" fill="#F4F4F4" />
+
+  <!-- Off-White Bold Geometric 'C' -->
+  <path d="M 215.2,26.5 A 50,50 0 1,0 215.2,93.5 L 200.3,80.1 A 30,30 0 1,1 200.3,39.9 Z" fill="#F4F4F4" />
+
+  <!-- Deep Blue Stencil 'E' (Detached Top Bar + Lower Stem with Middle & Bottom Bars) -->
+  <rect x="232" y="10" width="76" height="18" fill="#2B52A3" />
+  <path d="M 232,50 L 300,50 L 300,68 L 253,68 L 253,92 L 308,92 L 308,110 L 232,110 Z" fill="#2B52A3" />
+</svg>

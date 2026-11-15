@@ -1,0 +1,7 @@
+dayLabel,hoursText,isClosed,isHighlight,sortOrder
+"Monday","Closed",true,false,1
+"Tuesday","9:00 AM – 7:00 PM",false,false,2
+"Wednesday","Closed",true,false,3
+"Thursday – Saturday","9:00 AM – 7:00 PM",false,false,4
+"Sunday","9:00 AM – 6:00 PM",false,false,5
+"Before / After Hours","VIP Slots Available",false,true,6

@@ -23,4 +23,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://vinnie291.github.io/ace-of-hearts-barber-shop/sitemap.xml
+Sitemap: https://www.aceofheartsbarbershop.com/sitemap.xml
