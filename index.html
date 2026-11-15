@@ -107,12 +107,12 @@
   <!-- 1. STICKY TOP NAVIGATION HEADER                                       -->
   <!-- ===================================================================== -->
   <header id="siteHeader" class="sticky top-0 z-40 bg-obsidian border-b border-warmGold/45">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 sm:gap-4">
       
       <!-- Brand Crest Logo + Title -->
-      <a href="#top" class="flex items-center gap-3.5 group min-w-0">
+      <a href="#top" class="flex items-center gap-2 sm:gap-3.5 group min-w-0">
         <!-- Primary Circular Crest SVG (Crisp Flat Vector) -->
-        <svg class="w-12 h-12 sm:w-14 sm:h-14 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
+        <svg class="w-9 h-9 sm:w-14 sm:h-14 shrink-0" viewBox="0 0 200 200" aria-hidden="true">
           <circle cx="100" cy="100" r="95" fill="#090909" />
           <circle cx="100" cy="100" r="88" fill="none" stroke="#E51A24" stroke-width="3.5" />
           <circle cx="100" cy="100" r="57" fill="none" stroke="#E51A24" stroke-width="2.5" />
@@ -130,10 +130,10 @@
         </svg>
 
         <div class="min-w-0">
-          <span class="font-serif font-bold text-base sm:text-lg tracking-wider text-offWhite block truncate group-hover:text-warmGold transition-colors">
+          <span class="font-serif font-bold text-[13px] sm:text-lg tracking-normal sm:tracking-wider text-offWhite block whitespace-nowrap group-hover:text-warmGold transition-colors">
             ACE OF HEARTS
           </span>
-          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-warmGold block truncate">
+          <span class="text-[8.5px] sm:text-[11px] font-bold uppercase tracking-[0.06em] sm:tracking-[0.22em] text-warmGold block whitespace-nowrap">
             Barbershop • Fairfax, VA
           </span>
         </div>
@@ -148,12 +148,12 @@
         <a href="#location" class="text-xs font-bold uppercase tracking-[0.16em] text-offWhite/85 hover:text-warmGold transition-colors py-2">Location</a>
       </nav>
 
-      <!-- Desktop Primary CTA & Mobile Menu Toggle -->
-      <div class="flex items-center gap-3 shrink-0">
+      <!-- Desktop & Mobile Primary CTA + Mobile Menu Toggle -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <button
           type="button"
           onclick="openBooksyModal()"
-          class="bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.15em] px-4 sm:px-5 py-3 rounded-[6px] border border-richRed transition-colors cursor-pointer">
+          class="inline-flex items-center justify-center whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-[11px] sm:text-xs uppercase tracking-[0.08em] sm:tracking-[0.15em] px-2.5 sm:px-5 py-2 sm:py-3 rounded-[6px] border border-richRed transition-colors cursor-pointer">
           Book Now
         </button>
 
@@ -163,7 +163,7 @@
           aria-label="Toggle Menu"
           aria-expanded="false"
           aria-controls="mobileMenu"
-          class="md:hidden w-10 h-10 rounded-[6px] bg-cardDark border border-warmGold/45 text-offWhite hover:text-warmGold flex items-center justify-center cursor-pointer">
+          class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-[6px] bg-cardDark border border-warmGold/45 text-offWhite hover:text-warmGold flex items-center justify-center cursor-pointer">
           <svg id="mobileMenuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -555,7 +555,7 @@
         <!-- Right Direct Booksy CTA Box -->
         <div class="lg:col-span-4 flex flex-col items-stretch sm:items-center lg:items-stretch justify-center bg-cardDark border border-warmGold/35 rounded-[8px] p-6 sm:p-7 text-center space-y-4">
           <span class="text-xs font-bold uppercase tracking-[0.18em] text-offWhite/75">Instant Confirmation</span>
-          <button type="button" onclick="openBooksyModal()" class="w-full bg-richRed hover:bg-red-700 text-offWhite font-bold text-sm uppercase tracking-[0.15em] py-4 px-6 rounded-[6px] border border-richRed transition-colors duration-200 text-center cursor-pointer">
+          <button type="button" onclick="openBooksyModal()" class="w-full whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.15em] py-4 px-5 rounded-[6px] border border-richRed transition-colors duration-200 text-center cursor-pointer">
             Book Now on Booksy
           </button>
           <p class="text-xs text-offWhite/65">
@@ -736,10 +736,10 @@
 
           <!-- Action Buttons -->
           <div class="pt-4 flex flex-col sm:flex-row gap-3">
-            <button type="button" onclick="openBooksyModal()" class="flex-1 bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.14em] py-3.5 px-4 rounded-[6px] text-center transition-colors cursor-pointer">
+            <button type="button" onclick="openBooksyModal()" class="flex-1 whitespace-nowrap bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.1em] sm:tracking-[0.12em] py-3.5 px-3.5 rounded-[6px] text-center transition-colors cursor-pointer">
               Book Now on Booksy
             </button>
-            <a href="https://maps.google.com/?q=10621+Braddock+Rd+Fairfax+VA+22032" target="_blank" rel="noopener noreferrer" class="flex-1 bg-cardDark hover:bg-warmGold/15 text-warmGold border border-warmGold font-bold text-xs uppercase tracking-[0.14em] py-3.5 px-4 rounded-[6px] text-center transition-colors">
+            <a href="https://maps.google.com/?q=10621+Braddock+Rd+Fairfax+VA+22032" target="_blank" rel="noopener noreferrer" class="flex-1 whitespace-nowrap bg-cardDark hover:bg-warmGold/15 text-warmGold border border-warmGold font-bold text-xs uppercase tracking-[0.1em] sm:tracking-[0.12em] py-3.5 px-3.5 rounded-[6px] text-center transition-colors">
               Get Directions
             </a>
           </div>
@@ -1558,15 +1558,15 @@
             </p>
           </div>
 
-          <div class="pt-4 border-t border-warmGold/20 flex items-center justify-between gap-3">
-            <span class="text-[11px] uppercase tracking-widest text-offWhite/55 font-semibold">Suite #28 • Fairfax</span>
+          <div class="pt-4 border-t border-warmGold/20 flex items-center justify-between gap-2">
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-wider sm:tracking-widest text-offWhite/55 font-semibold truncate">Suite #28 • Fairfax</span>
             <a
               href="${service.booksyUrl}"
               target="_blank"
               rel="noopener noreferrer"
               data-service-id="${service.id}"
               onclick="handleServiceBookingClick(event, this)"
-              class="service-book-link inline-block bg-richRed hover:bg-red-700 text-offWhite font-bold text-xs uppercase tracking-[0.14em] px-4 py-2.5 rounded-[6px] transition-colors cursor-pointer">
+              class="service-book-link shrink-0 whitespace-nowrap inline-block bg-richRed hover:bg-red-700 text-offWhite font-bold text-[11px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.14em] px-3.5 sm:px-4 py-2.5 rounded-[6px] transition-colors cursor-pointer">
               Book on Booksy
             </a>
           </div>
