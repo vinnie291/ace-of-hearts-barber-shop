@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI Answer Engines & Search Assistants (AEO / GEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://vinnie291.github.io/ace-of-hearts-barber-shop/sitemap.xml
