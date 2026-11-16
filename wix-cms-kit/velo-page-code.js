@@ -63,8 +63,10 @@ $w.onReady(async function () {
     settings
   };
 
-  // 2. Send CMS data to the embedded HTML component (#html1) if present
-  const htmlEmbed = $w('#html1');
+  // 2. Send CMS data to the embedded HTML component (#html1 or #aceEmbed) if present
+  const htmlEmbed = ($w('#html1') && typeof $w('#html1').onMessage === 'function')
+    ? $w('#html1')
+    : $w('#aceEmbed');
   if (htmlEmbed && typeof htmlEmbed.postMessage === 'function') {
     const pushToEmbed = () => {
       htmlEmbed.postMessage({
