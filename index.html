@@ -2279,10 +2279,9 @@
       }
 
       if (window.parent && window.parent !== window) {
-        // Intercept external links only when a Wix Velo bridge is active so the parent
-        // Wix page can navigate outside the sandboxed iframe.
+        // Always intercept external links when embedded in Wix IFrame (#html1) so the parent
+        // Wix page navigates via wixLocationFrontend.to() outside the sandboxed iframe.
         document.addEventListener('click', (event) => {
-          if (!hasWixVeloBridge) return;
           const anchor = event.target.closest('a[href]');
           if (!anchor) return;
           const rawHref = anchor.getAttribute('href') || '';
